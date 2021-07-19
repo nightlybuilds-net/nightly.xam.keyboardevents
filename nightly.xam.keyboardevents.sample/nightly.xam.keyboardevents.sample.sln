@@ -6,6 +6,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nightly.xam.keyboardevents.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nightly.xam.keyboardevents.sample.iOS", "nightly.xam.keyboardevents.sample\nightly.xam.keyboardevents.sample.iOS\nightly.xam.keyboardevents.sample.iOS.csproj", "{169427F2-3B83-42AA-B403-39515F59F6B1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{4A9CAAC2-18F7-43B4-B798-E876A30A316D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nightly.xam.keyboardevents", "nightly.xam.keyboardevents\nightly.xam.keyboardevents.csproj", "{9728584E-F6AA-4228-88E3-C78F611D8EE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|iPhone = Ad-Hoc|iPhone
@@ -82,5 +86,26 @@ Global
 		{169427F2-3B83-42AA-B403-39515F59F6B1}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{169427F2-3B83-42AA-B403-39515F59F6B1}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{169427F2-3B83-42AA-B403-39515F59F6B1}.Release|iPhoneSimulator.Deploy.0 = Release|iPhoneSimulator
+		{9728584E-F6AA-4228-88E3-C78F611D8EE4}.Ad-Hoc|iPhone.ActiveCfg = Debug|Any CPU
+		{9728584E-F6AA-4228-88E3-C78F611D8EE4}.Ad-Hoc|iPhone.Build.0 = Debug|Any CPU
+		{9728584E-F6AA-4228-88E3-C78F611D8EE4}.AppStore|iPhone.ActiveCfg = Debug|Any CPU
+		{9728584E-F6AA-4228-88E3-C78F611D8EE4}.AppStore|iPhone.Build.0 = Debug|Any CPU
+		{9728584E-F6AA-4228-88E3-C78F611D8EE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9728584E-F6AA-4228-88E3-C78F611D8EE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9728584E-F6AA-4228-88E3-C78F611D8EE4}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{9728584E-F6AA-4228-88E3-C78F611D8EE4}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{9728584E-F6AA-4228-88E3-C78F611D8EE4}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{9728584E-F6AA-4228-88E3-C78F611D8EE4}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{9728584E-F6AA-4228-88E3-C78F611D8EE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9728584E-F6AA-4228-88E3-C78F611D8EE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9728584E-F6AA-4228-88E3-C78F611D8EE4}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{9728584E-F6AA-4228-88E3-C78F611D8EE4}.Release|iPhone.Build.0 = Release|Any CPU
+		{9728584E-F6AA-4228-88E3-C78F611D8EE4}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{9728584E-F6AA-4228-88E3-C78F611D8EE4}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DECF8948-C10B-4890-AEA2-722B9D183C21} = {4A9CAAC2-18F7-43B4-B798-E876A30A316D}
+		{6943E928-FE50-4C52-8A80-0B064C699D95} = {4A9CAAC2-18F7-43B4-B798-E876A30A316D}
+		{169427F2-3B83-42AA-B403-39515F59F6B1} = {4A9CAAC2-18F7-43B4-B798-E876A30A316D}
 	EndGlobalSection
 EndGlobal

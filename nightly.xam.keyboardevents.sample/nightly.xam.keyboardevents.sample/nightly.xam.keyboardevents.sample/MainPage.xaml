@@ -4,11 +4,20 @@
              xmlns:local="clr-namespace:nightly.xam.keyboardevents.sample"
              x:Class="nightly.xam.keyboardevents.sample.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
+    <StackLayout
+        VerticalOptions="Center"
+        >
+        <Label Text="Welcome to nightl.xam.keyboardevents!" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
+        <Entry
+            Placeholder="Write here"
+            />
+        <Label
+            HorizontalOptions="Center"
+            TextColor="Red"
+            x:Name="KeyBoardStatus"
+            />
     </StackLayout>
 
 </ContentPage>

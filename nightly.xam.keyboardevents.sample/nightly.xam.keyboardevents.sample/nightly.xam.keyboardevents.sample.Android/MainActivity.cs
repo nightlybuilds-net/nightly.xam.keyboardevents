@@ -17,6 +17,8 @@ namespace nightly.xam.keyboardevents.sample.Android
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
+            Keyboard.Activity = this;
+            
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
