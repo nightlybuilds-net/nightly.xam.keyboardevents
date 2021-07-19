@@ -349,3 +349,4 @@ MigrationBackup/
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
 nightly.xam.keyboardevents.sample/.idea/.idea.nightly.xam.keyboardevents.sample/.idea
+nightly.xam.keyboardevents.sample/.DS_Store
