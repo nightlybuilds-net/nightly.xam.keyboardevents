@@ -2,6 +2,8 @@ using System;
 using System.Diagnostics;
 using Android.App;
 using Android.Content;
+using Android.Graphics;
+using Android.Views;
 using Android.Views.InputMethods;
 
 namespace nightly.xam.keyboardevents
@@ -10,21 +12,25 @@ namespace nightly.xam.keyboardevents
     {
         private readonly InputMethodManager _inputMethodManager;
         private bool _wasShown;
+        private readonly View _mainView;
+
 
         public event EventHandler OnKeyboardShow;
         public event EventHandler OnKeyboardHide;
 
         public static Lazy<IKeyboard> Instance { get; } = new Lazy<IKeyboard>(() => new Keyboard());
 
+        // ReSharper disable once MemberCanBePrivate.Global
         public static Activity Activity;
 
         private Keyboard()
         {
             var context = Application.Context;
-            this._inputMethodManager = (InputMethodManager)context.GetSystemService(Context.InputMethodService);
+            this._inputMethodManager = (InputMethodManager) context.GetSystemService(Context.InputMethodService);
 
             if (Activity == null)
-                throw new Exception("Activity is NULL, please set Keyboard.Activity = this in your Android project MainActivity");
+                throw new Exception(
+                    "Activity is NULL, please set Keyboard.Activity = this in your Android project MainActivity");
             
             var window = Activity.Window;
             if (window?.DecorView?.ViewTreeObserver == null)
@@ -32,26 +38,34 @@ namespace nightly.xam.keyboardevents
                 Console.WriteLine("Expression window?.DecorView?.ViewTreeObserver is NULL cannot subscribe");
                 return;
             }
+
             window.DecorView.ViewTreeObserver.GlobalLayout += this.OnGlobalLayout;
+            this._mainView = window.DecorView;
         }
 
         private void OnGlobalLayout(object sender, EventArgs e)
         {
-            if(!this._wasShown && this.IsKeyboardVisible())
-            {
-                this.OnKeyboardShow?.Invoke(this, EventArgs.Empty);
-                this._wasShown = true;
-            }
-            else if(this._wasShown && !this.IsKeyboardVisible())
-            {
-                this.OnKeyboardHide?.Invoke(this, EventArgs.Empty);
-                this._wasShown = false;
-            }
-        }
+            var r = new Rect();
+            this._mainView.GetWindowVisibleDisplayFrame(r);
+            var height = this._mainView.Height;
+            var keypadHeight = height - r.Bottom;
 
-        private bool IsKeyboardVisible()
-        {
-            return this._inputMethodManager.IsAcceptingText;
+            if (keypadHeight > height * 0.15)
+            {
+                // 0.15 ratio is perhaps enough to determine keypad height.
+                // keyboard is opened
+                if (this._wasShown) return;
+                this._wasShown = true;
+                this.OnKeyboardShow?.Invoke(this, EventArgs.Empty);
+            }
+            else
+            {
+                // keyboard is closed
+                if (!this._wasShown) return;
+                this._wasShown = false;
+                this.OnKeyboardHide?.Invoke(this, EventArgs.Empty);
+            }
+
         }
     }
 }

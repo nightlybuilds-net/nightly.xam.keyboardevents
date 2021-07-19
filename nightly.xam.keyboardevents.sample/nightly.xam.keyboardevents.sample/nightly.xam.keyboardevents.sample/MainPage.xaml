@@ -5,7 +5,7 @@
              x:Class="nightly.xam.keyboardevents.sample.MainPage">
 
     <StackLayout
-        VerticalOptions="Center"
+        VerticalOptions="Start"
         >
         <Label Text="Welcome to nightl.xam.keyboardevents!" 
            HorizontalOptions="Center"
