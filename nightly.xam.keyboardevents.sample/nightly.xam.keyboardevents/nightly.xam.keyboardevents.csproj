@@ -12,7 +12,7 @@
         <Title>nightly.xam.keyboardevents</Title>
         <Description>nightly.xam.keyboardevents: xamarin forms library that expose show/hide events from keyboard.</Description>
         <Product>$(AssemblyName) ($(TargetFramework))</Product>
-        <PackageVersion>1.0.0-alpha1</PackageVersion>
+        <PackageVersion>1.0.0</PackageVersion>
         <Authors>Nightly Builds</Authors>
         <Owners>Nightly Builds</Owners>
         <NeutralLanguage>en</NeutralLanguage>
