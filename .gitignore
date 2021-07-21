@@ -350,3 +350,5 @@ MigrationBackup/
 .ionide/
 nightly.xam.keyboardevents.sample/.idea/.idea.nightly.xam.keyboardevents.sample/.idea
 nightly.xam.keyboardevents.sample/.DS_Store
+nightly.xam.keyboardevents.sample/.idea
+.DS_Store
