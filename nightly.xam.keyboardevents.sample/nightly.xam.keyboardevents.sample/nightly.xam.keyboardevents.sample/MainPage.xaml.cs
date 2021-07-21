@@ -13,13 +13,13 @@ namespace nightly.xam.keyboardevents.sample
         {
             InitializeComponent();
 
-            CrossKeyboard.Instance.Value.OnKeyboardShow += (sender, args) =>
+            CrossCrossKeyboard.Instance.Value.OnKeyboardShow += (sender, args) =>
             {
                 this.KeyBoardStatus.Text = "OPEN";
                 Console.WriteLine("OPEN");
             };
             
-            CrossKeyboard.Instance.Value.OnKeyboardHide += (sender, args) =>
+            CrossCrossKeyboard.Instance.Value.OnKeyboardHide += (sender, args) =>
             {
                 this.KeyBoardStatus.Text = "CLOSED";
                 Console.WriteLine("CLOSED");

@@ -3,16 +3,16 @@ using UIKit;
 
 namespace nightly.xam.keyboardevents
 {
-    public partial class CrossKeyboard : IKeyboard
+    public partial class CrossCrossKeyboard : ICrossKeyboard
     {
         private bool _isShowed;
         
         public event EventHandler OnKeyboardShow;
         public event EventHandler OnKeyboardHide;
 
-        public static Lazy<IKeyboard> Instance { get; } = new Lazy<IKeyboard>(() => new CrossKeyboard());
+        public static Lazy<ICrossKeyboard> Instance { get; } = new Lazy<ICrossKeyboard>(() => new CrossCrossKeyboard());
 
-        private CrossKeyboard()
+        private CrossCrossKeyboard()
         {
             UIKeyboard.Notifications.ObserveDidShow(this.KeyboardShow);
             UIKeyboard.Notifications.ObserveDidHide(this.KeyboardHide);

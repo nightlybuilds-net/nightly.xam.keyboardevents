@@ -2,12 +2,12 @@ using System;
 
 namespace nightly.xam.keyboardevents
 {
-    public partial class CrossKeyboard : IKeyboard
+    public partial class CrossCrossKeyboard : ICrossKeyboard
     {
         public event EventHandler OnKeyboardShow;
         public event EventHandler OnKeyboardHide;
         
-        public static Lazy<IKeyboard> Instance { get; } = new Lazy<IKeyboard>(() => new CrossKeyboard());
+        public static Lazy<ICrossKeyboard> Instance { get; } = new Lazy<ICrossKeyboard>(() => new CrossCrossKeyboard());
 
     }
 }

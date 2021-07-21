@@ -17,7 +17,7 @@ namespace nightly.xam.keyboardevents.sample.Android
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
-            CrossKeyboard.Activity = this;
+            CrossCrossKeyboard.Activity = this;
             
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);

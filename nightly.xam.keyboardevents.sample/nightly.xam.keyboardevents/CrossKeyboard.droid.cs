@@ -8,7 +8,7 @@ using Android.Views.InputMethods;
 
 namespace nightly.xam.keyboardevents
 {
-    public partial class CrossKeyboard : IKeyboard
+    public partial class CrossCrossKeyboard : ICrossKeyboard
     {
         private readonly InputMethodManager _inputMethodManager;
         private bool _wasShown;
@@ -18,12 +18,12 @@ namespace nightly.xam.keyboardevents
         public event EventHandler OnKeyboardShow;
         public event EventHandler OnKeyboardHide;
 
-        public static Lazy<IKeyboard> Instance { get; } = new Lazy<IKeyboard>(() => new CrossKeyboard());
+        public static Lazy<ICrossKeyboard> Instance { get; } = new Lazy<ICrossKeyboard>(() => new CrossCrossKeyboard());
 
         // ReSharper disable once MemberCanBePrivate.Global
         public static Activity Activity;
 
-        private CrossKeyboard()
+        private CrossCrossKeyboard()
         {
             var context = Application.Context;
             this._inputMethodManager = (InputMethodManager) context.GetSystemService(Context.InputMethodService);

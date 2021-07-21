@@ -2,7 +2,7 @@
 
 namespace nightly.xam.keyboardevents
 {
-    public interface IKeyboard
+    public interface ICrossKeyboard
     {
         /// <summary>
         /// Raised when keyboard is show
